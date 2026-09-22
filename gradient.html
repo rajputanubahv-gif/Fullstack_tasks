@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient Display(Linear, Radial, Conic)</title>
+    <style>
+        .box1, .box2, .box3,.box4{
+            width: 300px;
+            height: 300px;
+        }
+        div{
+            border: 5px solid #000;
+        }
+        .box1{
+            background: linear-gradient(90deg, red 20%, yellow 50%, blue 20%, green 80%);
+        }
+        .box2{
+            background: radial-gradient(circle, blue 20%, green 50%, yellow 80%);
+        }
+        .box3{
+            background: conic-gradient(purple 20%, pink 50%, green 80%);
+        }
+        .box4{
+             background: radial-gradient(circle at 50% 50%,blue 50%,pink 10%);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <p>Linear Gradient</p>
+    <div class="box1"></div>
+    <p>Radial Gradient</p>
+    <div class="box2"></div>
+    <p>Conic Gradient</p>
+    <div class="box3"></div>
+    <div class="gradient">
+    <p>Sphere</p>
+    <div class="box4"></div>
+</div>
+    </div>
+    <button onclick="window.open('https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/gradient/linear-gradient')">Button</button>
+</body>
+</html>

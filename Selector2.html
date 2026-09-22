@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <Style>
+        .cls{
+            text-align: center;
+        }
+        input[type=email]{
+            border-radius: 15px;
+            padding-left: 15px;
+            border:1px solid grey;
+        }
+
+        section h2{
+            color:aqua;
+        }
+
+        section>h2{
+            color:green;
+        }
+
+        h2~p{
+            color: brown;
+            font-weight: 200;
+        }
+        h2+p{
+            color: blueviolet;
+        }
+        button:hover{
+            background-color: black;
+            color:aliceblue;
+            box-shadow: 3px 3px 5px grey;
+        }
+        button:active{
+            background-color: yellow;
+            color:black;
+        }
+        button:focus{
+            background-color: brown;
+            box-shadow: 3px 3px 5px grey;
+        }
+        a:link{
+            color:red;
+            
+        }
+        a:visited{
+            color:yellow;
+        }
+    </Style>
+</head>
+<body>
+    <div class="cls">
+        <h2>Enter Your Email and Password</h2>
+        <input data="null" type="email" placeholder="Email"><br><br>
+        <input type="password" placeholder="Password"/>
+    </div>
+    <section>
+        <h2>Heading1</h2>
+        <p>Para1</p>
+        <p>Para2</p>
+        <h2>Heading 3</h2>
+        <div>
+            <h2>Heading2</h2>
+        </div>
+    </section>
+    <input type="checkbox" checked/>
+    <button onclick="window.open('https:/www.google.com')">Click Me</button><br>
+    <a href="https://www.google.com/?zx=1787649909812">Link</a>
+</body>
+</html>

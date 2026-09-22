@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {
+            font-size: 30px;
+            margin: 3%;
+            border-width: 0 0 2px 0;
+            border-color: grey;
+        }
+
+        /*Form Based Pseudo Classes
+            :required
+            :optional
+            :valid
+            :invalid
+            :read-only
+            :read-write
+            :disabled
+            :enabled
+            :out-of-range
+            :in-range
+        */
+
+
+        input:required {
+            border: 2px solid blue;
+        }
+
+        input:optional {
+            border: 2px solid gray;
+        }
+
+        input:valid {
+            background-color: lightgreen;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        input:invalid {
+            background-color: pink;
+        }
+
+        input:read-only {
+            background-color: lightgray;
+        }
+
+        input:read-write {
+            background-color: white;
+        }
+
+
+        input:disabled {
+            opacity: 0.5;
+        }
+
+        input:enabled {
+            border-radius: 5px;
+        }
+
+        input:in-range {
+            border: 2px solid green;
+        }
+
+        input:out-of-range {
+            border: 2px solid red;
+        }
+
+
+        input:hover {
+            box-shadow: 2px 2px 4px 2px gray;
+        }
+
+        input:focus {
+            outline: 0px solid transparent;
+        }
+
+        input:placeholder-shown {
+            font-family: serif;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <input type="text" placeholder="First Name" required>
+        <input type="text" placeholder="Middle Name">
+        <input type="text" placeholder="Last Name" required>
+        <input type="email" placeholder="Email" required>
+        <input type="text" placeholder="Optional field">
+        <input type="number" min="10" max="100">
+        <input type="text" value="Kukreti" readonly>
+        <input type="text" value="Disabled" disabled>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>

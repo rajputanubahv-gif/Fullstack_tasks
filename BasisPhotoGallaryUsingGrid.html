@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Photo Gallery</title>
+</head>
+<style>
+    .container{
+        outline:1px solid black;
+        display: grid;
+        grid-template-columns: repeat(4, 100px);
+        grid-template-rows: repeat(3, 100px);
+        justify-content: center;
+        outline:1px solid black;
+    }
+    .container>div{
+
+        outline:1px solid blue;
+        height: 90px;
+        width: 90px;
+        background-color: lightblue;
+    }
+    #box1, #box2, #box3, #box4, #box5, #box6, #box7, #box8, #box9, #box10, #box11, #box12{
+        text-align: center;
+    }
+    h1{
+        text-align: center;
+    }
+</style>
+<body>
+    <h1>Basic Photo Gallery</h1>
+    <div class="container">
+        <div id="box1"><p>Box 1</p></div>
+        <div id="box2"><p>Box 2</p></div>
+        <div id="box3"><p>Box 3</p></div>
+        <div id="box4"><p>Box 4</p></div>
+        <div id="box5"><p>Box 5</p></div>
+        <div id="box6"><p>Box 6</p></div>
+        <div id="box7"><p>Box 7</p></div>
+        <div id="box8"><p>Box 8</p></div>
+        <div id="box9"><p>Box 9</p></div>
+        <div id="box10"><p>Box 10</p></div>
+        <div id="box11"><p>Box 11</p></div>
+        <div id="box12"><p>Box 12</p></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Horizontal Scroll Box</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            .scroll-box {
+                display:inline-flex;
+                width: 100vw;
+                scrollbar-width: none;
+                overflow: scroll;
+
+            }
+            .item{
+                min-width: 100vw;
+                position:sticky;
+                left:0;
+                width:100vw;
+                height: 100vw;
+                font: size 50px;
+                color: white;
+                text-align: center;
+
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="scroll-box">
+                <div class="item" style="background-color: blue;">Box 1</div>
+                <div class="item" style="background-color: green;">Box 2</div>
+                <div class="item" style="background-color: red;">Box 3</div>
+                <div class="item" style="background-color: yellow;">Box 4</div>
+            </div>
+    </body>
+</html>

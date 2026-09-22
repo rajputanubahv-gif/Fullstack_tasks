@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Dashboard</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            height: 100vh;
+            background: #f4f6f9;
+        }
+
+        .sidebar {
+            width: 220px;
+            background: #1f2937;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .sidebar h2 {
+            margin-bottom: 30px;
+        }
+
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            margin: 5px 0;
+            border-radius: 5px;
+        }
+
+        .sidebar a:hover {
+            background: #374151;
+        }
+
+        /* Main */
+        .main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Navbar */
+        .navbar {
+            height: 60px;
+            background: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        /* Content */
+        .content {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* Cards */
+        .cards {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            flex: 1;
+            min-width: 220px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        /* Table */
+        table {
+            width: 100%;
+            background: white;
+            border-collapse: collapse;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background: #2563eb;
+            color: white;
+        }
+
+        @media(max-width:768px){
+
+            body{
+                flex-direction:column;
+            }
+
+            .sidebar{
+                width:100%;
+                flex-direction:row;
+                justify-content:space-around;
+                align-items:center;
+            }
+
+            .sidebar h2{
+                display:none;
+            }
+
+            .cards{
+                flex-direction:column;
+            }
+
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="sidebar">
+        <h2>Dashboard</h2>
+
+        <a href="#">Home</a>
+        <a href="#">Users</a>
+        <a href="#">Products</a>
+        <a href="#">Orders</a>
+        <a href="#">Settings</a>
+    </div>
+
+    <div class="main">
+
+        <div class="navbar">
+            <h3>Admin Panel</h3>
+            <span>Welcome, Admin</span>
+        </div>
+
+        <div class="content">
+
+            <div class="cards">
+
+                <div class="card">
+                    <h2>120</h2>
+                    <p>Total Users</p>
+                </div>
+
+                <div class="card">
+                    <h2>85</h2>
+                    <p>Orders</p>
+                </div>
+
+                <div class="card">
+                    <h2>$5,200</h2>
+                    <p>Revenue</p>
+                </div>
+
+            </div>
+
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Status</th>
+                </tr>
+
+                <tr>
+                    <td>Ashish</td>
+                    <td>Inactive</td>
+                </tr>
+
+                <tr>
+                    <td>Akshat</td>
+                    <td>Active</td>
+                </tr>
+
+                <tr>
+                    <td>Kishan</td>
+                    <td>Inactive</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

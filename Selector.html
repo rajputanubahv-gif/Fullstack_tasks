@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        /*{
+            color:blue;
+        }
+        #id{
+            color:brown;
+        }
+        .class{
+            color:red;
+        }
+        li[for="label"]{
+            color:aliceblue;
+        }
+        h6{
+            color:black;
+        }
+        ul p{
+            color:green;
+        }
+        li:hover,p:hover {
+            color: red;
+        }
+        li:nth-child(even){
+            color: grey;
+        }
+        li::before {
+            color: rgb(157, 255, 0);
+            font-size: 25px;
+            content:"-->";
+        }*/
+        button{
+            width:auto;
+            height:auto;
+        }
+        button:active{
+            background-color: brown;
+        }
+        button:focus{
+            border: 5px solid blue;
+        }
+        button:hover{
+            color:aqua;
+        }
+
+        a:link{
+            color:grey;
+            text-decoration:underline;
+        }
+        a:visited{
+            color:darkblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Types Of Selectors</h1>
+    <ul>
+        <li>Universal(*)</li>
+        <li id="id">Id(#)</li>
+        <li class="class">Class(.)</li>
+        <li for="label">Attribute</li>
+        <li><h6>Element(Tags)</h6></li>
+        <li><p>Combinators</p></li>
+        <li><b>Pseudo Class</b></li>
+        <li>Pseudo Element</li>
+    </ul>
+    <h1>Exploring more on Pseudo Class using properties used in Styles like "li::hover" etc</h1>
+
+    <button onclick="window.open('https://www.google.com')">Click to Be Redirected on Google with Button</button><br>
+    <a href="https://www.google.com">Click to Be Redirected on Google with Link</a>
+    
+</body>
+</html>

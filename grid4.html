@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local And Global Variables</title>
+    <style>
+        /* :root{
+            --primary-color: red;
+            --size: 30px;
+        }
+        div{
+            --primary-color:blue;
+        }
+        h2{
+            color: var(--primary-color);
+            font-size:var(--size);
+        } */
+
+        /* h2{
+            font-size: 30px;
+        }
+        h2{
+            font-size: 40px;
+        } */
+        /* @layer special, base;
+        @layer base{
+            .btn{
+                font-size: 30px;
+            }
+        }
+        @layer special{
+            .btn-submit{
+                font-size: 40px;
+            }
+        } */
+
+        button{
+            font-size: 30px;
+            color:white;
+            background-color:black;
+        }
+        @media(min-width: 500px){
+            button{
+                font-size: 40px;
+                color:black;
+                background-color:yellow;
+                text-transform:uppercase;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- <div>
+        <h2>Hello, World!</h2>
+    </div>
+    <h2>Hello, World!</h2> -->
+
+    <!-- <h2 class="">Hello, World!</h2>
+     <h2 class="">Hello, World!</h2> -->
+
+     <button class="btn-submit btn">Click Me!!</button>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Three Cards</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+
+.container{
+    display:flex;
+    padding:3%;
+    column-gap:20px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.card{
+    flex:1;
+    width:300px;
+    background:#fff;
+    border-radius:12px;
+    padding:5%;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+.content{
+    padding:20px;
+}
+
+.content h2{
+    margin-bottom:10px;
+}
+
+.content p{
+    color:#555;
+    margin-bottom:20px;
+    line-height:1.5;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    background:#007bff;
+    color:white;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:#0056b3;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+    <div class="card">
+        <div class="content">
+            <h2>Card One</h2>
+            <p>This is our Card One</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="content">
+            <h2>Card Two</h2>
+            <p>This is our Card Two</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="content">
+            <h2>Card Three</h2>
+            <p>This is our Card Three</p>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

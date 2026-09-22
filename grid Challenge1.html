@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Challenge 1</title>
+    <style>
+        .container{
+            display:grid;
+            height:500px;
+            width:500px;
+            gap:5px;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            outline: 1px solid black;
+        }
+        #parent{
+            display:grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            gap:5px;
+            background-color: lightblue;
+        }
+        #child1{
+            grid-column-start: 1;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            background-color: lightgreen;
+        }
+        #child2{
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 2;
+            grid-row-end: 4;
+            background-color: lightcoral;
+        }
+        #child3{
+            grid-column-start: 2;
+            grid-column-end: 4;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            background-color: lightyellow;
+        }
+        #child4{
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 3;
+            grid-row-end: 4;
+            background-color: lightpink;
+        }
+        #child5{
+            grid-column-start: 3;
+            grid-column-end: 4;
+            grid-row-start: 3;
+            grid-row-end: 4;
+            background-color: lightgray;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="parent">
+            <div id="child1"></div>
+            <div id="child2"></div>
+            <div id="child3"></div>
+            <div id="child4"></div>
+            <div id="child5"></div>
+        </div>
+    </div>
+</body>
+</html>

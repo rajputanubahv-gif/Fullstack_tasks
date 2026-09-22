@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Art Times - Layout</title>
+    <!-- 
+      Loading Google Fonts:
+      - 'UnifrakturMaguntia' for the Old English main title
+      - 'Playfair Display' for the serifs headlines and body text
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- RESET AND BASIC PAGE STYLING --- */
+        :root {
+            --primary-serif: 'Playfair Display', serif;
+            --main-title-font: 'UnifrakturMaguntia', serif;
+            --text-color: #333;
+            --border-color: #e0e0e0; /* Light gray borders */
+        }
+
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: var(--primary-serif);
+            color: var(--text-color);
+            line-height: 1.4;
+            background-color: #fcfcfc; /* Very light paper-like background */
+        }
+
+        /* Standardize some elements across the page */
+        h1, h2, h3, h4 { margin: 0; font-weight: normal; }
+        p { margin: 0 0 1em 0; }
+        img { max-width: 100%; height: auto; }
+
+        /* A light grey dividing line used in several places */
+        .separator { border-top: 1px solid var(--border-color); }
+
+
+        /* --- THE MAIN PAGE CONTAINER --- */
+        /* Center and constraint the width, just like a real paper */
+        .paper-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            border: 1px solid var(--border-color); /* The soft outer border */
+            background-color: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05); /* Soft drop shadow for realism */
+        }
+
+        /* --- THE MASTHEAD (HEADER) AREA --- */
+        .masthead {
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        /* The main "Old English" title */
+        .masthead h1 {
+            font-family: var(--main-title-font);
+            font-size: 5rem;
+            margin-bottom: 0.2rem;
+            line-height: 1;
+        }
+
+        /* The date/url/location bar */
+        .sub-header {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #777;
+            padding: 10px 0;
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+
+        /* --- THE CORE CONTENT GRID --- */
+        /* This grid creates the 3/4 wide main article on the left and the 1/4 wide sidebar on the right. */
+        .main-content-grid {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+
+        /* --- LEFT / MAIN COLUMN --- */
+        .left-column {
+            padding: 20px;
+            border-right: 1px solid var(--border-color);
+        }
+
+        /* The main photo and its crop effect */
+        .main-photo-wrapper {
+            width: 100%;
+            height: 400px; /* Force a consistent height */
+            overflow: hidden; /* This achieves the 'zoom' effect */
+            margin-bottom: 20px;
+        }
+
+        .main-photo-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Zooms to fill without stretching */
+            object-position: center 20%; /* Optional: Adjusts the focal point */
+        }
+
+        /* Large headline styling */
+        .big-headline-section {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .category-label {
+            text-transform: uppercase;
+            color: #888;
+            font-size: 0.85rem;
+            letter-spacing: 1.5px;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .big-headline-section h2 {
+            font-size: 3.5rem;
+            text-transform: uppercase;
+            line-height: 1.1;
+            margin-bottom: 10px;
+        }
+
+        .author {
+            color: #888;
+            font-size: 0.9rem;
+            font-style: italic;
+        }
+
+        /* Multi-column body text - automatically splits into 3 columns! */
+        .multi-column-text {
+            column-count: 3;
+            column-gap: 20px;
+            /* column-rule is an optional dividing line between columns */
+            /* column-rule: 1px solid #eee; */
+            font-size: 0.9rem;
+            color: #555;
+            text-align: justify; /* Justified text looks very newspaper-like */
+        }
+
+
+        /* --- RIGHT / SIDEBAR COLUMN --- */
+        .right-column {
+            padding: 20px;
+        }
+
+        .sidebar-article {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        /* Remove border from the last item */
+        .sidebar-article:last-of-type {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .sidebar-article h3 {
+            font-size: 1.6rem;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            line-height: 1.2;
+        }
+
+        .sidebar-article .author { margin-bottom: 15px; display: block;}
+
+        .sidebar-article p {
+            font-size: 0.85rem;
+            color: #555;
+            text-align: justify;
+        }
+
+
+        /* --- FOOTER --- */
+        .paper-footer {
+            text-align: center;
+            padding: 15px 20px;
+            font-size: 0.75rem;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-top: 1px solid var(--border-color);
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="paper-container">
+        
+        <!-- Masthead -->
+        <header class="masthead">
+            <h1>The Art Times</h1>
+            
+            <div class="sub-header">
+                <span>Wednesday, March 14, 2023</span>
+                <span>WWW.THEARTTIMES.COM</span>
+                <span>Paris, France</span>
+            </div>
+        </header>
+
+        <!-- Main Content Area (3/4 Grid) -->
+        <div class="main-content-grid">
+            
+            <!-- (left-column) Left side with photo, large headline, and multi-column text -->
+            <main class="left-column">
+                
+                <!-- Cropped Photo -->
+                <div class="main-photo-wrapper">
+                    <!-- Replace 'musician.jpg' with your actual photo filename -->
+                    <img src="musician.jpg" alt="A musician playing guitar and writing at a desk">
+                </div>
+
+                <!-- Big Headline Area -->
+                <div class="big-headline-section">
+                    <span class="category-label">Music</span>
+                    <h2>Pop Music Highlights</h2>
+                    <span class="author">by Article Author</span>
+                </div>
+
+                <!-- Three-Column Body Text -->
+                <div class="multi-column-text">
+                    <p>Et apicias es doluptatus non ex et a parum ima sus doluptatur auditatur? Agniendae consed quis reperibus. Od quodignis si audam nosae que plitis sundunt esto iliquia quo voluptate nimenti uribus dolorerum incto quiat expedis doluptatiam repudan daectustibus se qui volesecto mint, ex estatatia sam volorendis sequis qui velique nis ius as comnien.</p>
+                    <p>deligendi dust, nost ium ut out id eum, qui quodis ipsum sam voluptate natibus dignis acepraecus. Nonseque que occus explantes doluptatqui nest pa solorempore id elibus et earibuscil imperum sum, eum voloribus estorum quiquo et fugias ditas cusae- voluptaerum sumquos int quom quiae quasper fercipsa volessus ulpa coriaspis den- destis nihilaccus derum out lam que plibusam re nonseque quatur, quam quam, cum velia ni voluptu riospe lam in net lianiam, culluptio. Solor reiur aritateni et a dolum iusa volestium resed eos doloribus ex eos quam, que oute pe venitis ullant, occaborum et fuga.</p>
+                    <p>Nequam qui aliquam non perferi busapiet faccusam aut optatquis corum dici idelent aspe velique et vernat de seceptati dit in et aut quia ditia pa- repenibus. Od quodignis si audam nosae que plitis sundunt esto iliquia quo voluptate nimenti uribus dolorerum incto quiat expedis doluptatiam repudan daectustibus se qui volesecto mint.</p>
+                </div>
+
+            </main>
+
+            <!-- (right-column) Sidebar with stacked articles -->
+            <aside class="right-column">
+                
+                <article class="sidebar-article">
+                    <span class="category-label">Art</span>
+                    <h3>Art Festivals</h3>
+                    <span class="author">by Article Author</span>
+                    <p>Et apicias es doluptatus non ex et a parum ima sus doluptatur auditatur? Agniendae consed quis reperibus. Od quodignis si audam nosae que plitis sundunt esto iliquia quo voluptate nimenti uribus dolorerum incto quiat expedis doluptatiam repudan daectustibus se qui volesecto mint, ex estatatia sam volorendis sequis qui velique nis ius as comnien deligendi dust, nost ium ut out id eum, qui quodis ipsum sam voluptate natibus dignis acepraecus.</p>
+                </article>
+
+                <article class="sidebar-article">
+                    <span class="category-label">Art & Technology</span>
+                    <h3>Is AI The New Medium?</h3>
+                    <span class="author">by Article Author</span>
+                    <p>Agniendae consed quis reperibus. Od quodignis si audam nosae que plitis sundunt esto iliquia quo voluptate nimenti uribus dolorerum incto quiat expedis doluptatiam repudan daectustibus se qui volesecto mint, ex estatatia sam volorendis sequis qui velique nis ius as comnien deligendi dust, nost ium ut out id eum, qui quodis ipsum sam voluptate natibus dignis acepraecus.</p>
+                </article>
+
+            </aside>
+        </div>
+
+        <!-- Footer -->
+        <footer class="paper-footer">
+            <span>Front Page | 1</span>
+        </footer>
+
+    </div>
+
+</body>
+</html>

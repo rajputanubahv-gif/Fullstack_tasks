@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        #test{
+            display:block;
+            height: 500vh;
+            width: 100vw;
+            font-size: 30px;
+            color: white;
+        }
+        #test>div{
+            display:block;
+            position: sticky;
+            top: 100px;
+            width: 100vw;
+            height:100vh;
+        }
+        #test>div:nth-child(1){
+            background-color: red;
+        }
+        #test>div:nth-child(2){
+            background-color: blue;
+        }
+        #test>div:nth-child(3){
+            background-color: green;
+        }
+        #test>div:nth-child(4){
+            background-color: yellow;
+        }
+        #test>div:nth-child(5){
+            background-color: purple;
+        }
+    </style>
+</head>
+<body>
+    <div class="w-full h-fit text-xl text-white">
+        <div class="sticky w-screen h-screen top-[0px] bg-yellow-500">1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </div>
+    
+</body>
+</html>

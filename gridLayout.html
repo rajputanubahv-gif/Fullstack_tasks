@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+</head>
+<style>
+    .container{
+        outline:1px solid black;
+        display: grid;
+        /* grid-template-columns:repeat(4,1fr);  /*1fr 2fr 1fr */
+        /* grid-template-columns:repeat(4,minmax(100px,1fr)); */
+        /* grid-template-columns:repeat(auto-fit,minmax(100px,1fr)); */
+        grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+        text-align: center;
+        justify-content: center;
+    }
+    .container>div{
+        outline:1px dashed black;
+        height: 50px;
+    }
+    p{
+        font-size: 20px;
+    }
+</style>
+<body>
+    <div class="container">
+        <div id="box1"><p>Box 1</p></div>
+        <div id="box2"><p>Box 2</p></div>
+        <div id="box3"><p>Box 3</p></div>
+        <div id="box4"><p>Box 4</p></div>
+        <div id="box5"><p>Box 5</p></div>
+        <div id="box6"><p>Box 6</p></div>
+        <div id="box7"><p>Box 7</p></div>
+        <div id="box8"><p>Box 8</p></div>
+        <div id="box9"><p>Box 9</p></div>
+        <div id="box10"><p>Box 10</p></div>
+        <div id="box11"><p>Box 11</p></div>
+        <div id="box12"><p>Box 12</p></div>
+        <data id="box13"><p>Box 13</p></data>
+    </div>
+</body>
+</html>

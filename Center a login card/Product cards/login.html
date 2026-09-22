@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product Cards</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+    display:flex;
+    flex-direction:column;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+.card-container{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    margin:30px;
+}
+
+.card{
+    background:white;
+    border-radius:10px;
+    box-shadow:0 0 10px gray;
+    padding:40px;
+    text-align:center;
+    font-size:20px;
+    font-weight:bold;
+}
+
+.container{
+    display:flex;
+    padding:3%;
+    column-gap:20px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.card{
+    flex:1;
+    width:300px;
+    background:#fff;
+    border-radius:12px;
+    padding:5%;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+.content{
+    padding:20px;
+}
+
+.content h2{
+    margin-bottom:10px;
+}
+
+.content p{
+    color:#555;
+    margin-bottom:20px;
+    line-height:1.5;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    background:#007bff;
+    color:white;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:#0056b3;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+    <div class="card">
+        <div class="content">
+            <h2>Card One</h2>
+            <p>This is our Card One</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="content">
+            <h2>Card Two</h2>
+            <p>This is our Card Two</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="content">
+            <h2>Card Three</h2>
+            <p>This is our Card Three</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="content">
+            <h2>Card Four</h2>
+            <p>This is our Card Four</p>
+        </div>
+    </div>
+    <br>
+    <div class="card">
+        <div class="content">
+            <h2>Card Five</h2>
+            <p>This is our Card Five</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="content">
+            <h2>Card Six</h2>
+            <p>This is our Card Six</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="content">
+            <h2>Card Seven</h2>
+            <p>This is our Card Seven</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="content">
+            <h2>Card Eight</h2>
+            <p>This is our Card Eight</p>
+        </div>
+    </div>
+
+
+</div>
+
+</body>
+</html>
